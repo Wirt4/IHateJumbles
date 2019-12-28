@@ -61,7 +61,7 @@ class IHateJumbles
   end
 
   def find(scrambled_word)
-    @hash_dict[alpha_num(scrambled_word)]
+    return @hash_dict[alpha_num(scrambled_word)] if !@hash_dict.empty?
+    puts 'error: no dictionary loaded'
   end
 end
-
